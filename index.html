@@ -18,7 +18,11 @@
             --bg: #810e56;             
             --shape-cyan: #70cddf;     
             --shape-dark: #560b49;     
-            --card: rgba(255, 255, 255, 0.08); 
+            
+            /* --- MUDANÇA AQUI: O EFEITO ROXO ESCURO --- */
+            /* Em vez de branco transparente, usamos a cor da marca com 90% de opacidade */
+            --card: rgba(86, 11, 73, 0.9); 
+            
             --text: #ffffff;           
             --accent: #ffffff;         
             --hover-light: #ffffff;    
@@ -63,8 +67,8 @@
             align-items: center;
             transition: 0.3s ease; 
             border: 1px solid var(--glass-border);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            
+            /* Removi o blur para ficar nítido e sólido como você gostou */
             cursor: pointer;
             
             /* Preparação para animação via JS */
@@ -77,8 +81,9 @@
         .card:hover { 
             transform: translateY(-5px); 
             border-color: var(--hover-light); 
-            background: rgba(255, 255, 255, 0.12); 
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            /* MUDANÇA NO HOVER: Fica um roxo um pouco mais claro e vivo */
+            background: rgba(110, 20, 95, 1); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .full { grid-column: span 2; }
@@ -91,13 +96,13 @@
             background: linear-gradient(45deg, #aaa, #ddd); 
             margin-bottom: 15px; 
             object-fit: cover; 
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.2); /* Borda um pouco mais grossa */
         }
 
         h1 { font-size: 1.5rem; margin: 5px 0; font-weight: 700; text-align: center;}
         
         /* Ajuste para o texto do cargo + ícone pequeno */
-        p { font-size: 0.9rem; opacity: 0.8; text-align: center; margin-bottom: 10px; font-weight: 400; display: flex; align-items: center; gap: 6px; }
+        p { font-size: 0.9rem; opacity: 0.9; text-align: center; margin-bottom: 10px; font-weight: 400; display: flex; align-items: center; gap: 6px; justify-content: center; }
         
         .label { font-weight: 600; font-size: 0.85rem; color: var(--accent); margin-top: 8px; text-align: center;}
 
